@@ -5,13 +5,19 @@ from api.models import Post
 from rest_framework import permissions
 from api.permissions import IsOwnerOrReadOnly
 
+
 class UserList(generics.ListAPIView):
+    """
+Display all `users`.
+    """
     queryset = User.objects.all()
     serializer_class = serializers.UserSerializer
+
 
 class UserDetail(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = serializers.UserSerializer
+
 
 class PostList(generics.ListCreateAPIView):
     queryset = Post.objects.all()
@@ -20,6 +26,7 @@ class PostList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
