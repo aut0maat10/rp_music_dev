@@ -11,7 +11,7 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ['id', 'title', 'body', 'blurb',
-                  'owner', 'image', 'categories',]
+                  'owner', 'image', 'categories']
 
     def to_representation(self, instance):
         # Convert Markdown to HTML before serializing
@@ -26,7 +26,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['id', 'username', 'posts', 'categories',]
+        fields = ['id', 'username', 'posts', 'categories']
 
 
 class CategorySerializer(serializers.ModelSerializer):
