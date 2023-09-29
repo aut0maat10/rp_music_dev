@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-b-dx4ca++p=xg@d3$#0cmts5a0km&ute9%j7c&v%zi_8i(he&#
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "env-rp-music-dev.eba-sxduvmc3.us-east-1.elasticbeanstalk.com"]
+    "env-rp-music-dev.eba-sxduvmc3.us-east-1.elasticbeanstalk.com", "localhost", ]
 
 
 # Application definition
