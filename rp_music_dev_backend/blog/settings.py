@@ -28,7 +28,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'env-rp-music-dev.eba-sxduvmc3.us-east-1.elasticbeanstalk.com', 'localhost', '127.0.0.1']
-########
+# START SCRIPT
+# script to resolve AWS EB health check issue as described here
+# https://hashedin.com/blog/5-gotchas-with-elastic-beanstalk-and-django/
 
 
 def is_ec2_linux():
@@ -65,7 +67,7 @@ private_ip = get_linux_ec2_private_ip()
 if private_ip:
     ALLOWED_HOSTS.append(private_ip)
 
-########
+# END SCRIPT
 
 # Application definition
 
