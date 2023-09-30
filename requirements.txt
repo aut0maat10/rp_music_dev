@@ -4,3 +4,5 @@ django-cors-headers
 markdown
 django-markdownx
 pillow
+gunicorn
+django-ebhealthcheck
