@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-b-dx4ca++p=xg@d3$#0cmts5a0km&ute9%j7c&v%zi_8i(he&#
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    AWS_API_URL,
+    # AWS_API_URL,
     '127.0.0.1',
     '34.229.51.5'
     ]
