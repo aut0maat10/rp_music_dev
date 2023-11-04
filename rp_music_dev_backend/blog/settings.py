@@ -19,8 +19,8 @@ import os
 
 
 
-AWS_API_URL = os.getenv("AWS_API_URL")
-print(AWS_API_URL)
+# AWS_API_URL = os.getenv("AWS_API_URL")
+# print(AWS_API_URL)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -36,7 +36,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     AWS_API_URL,
-    '127.0.0.1'
+    '127.0.0.1',
+    '34.229.51.5'
     ]
 # START SCRIPT
 # script to resolve AWS EB health check issue as described here
@@ -197,4 +198,4 @@ CORS_ALLOWED_ORIGINS = [
 
 ]
 
-print('API Key: ', AWS_API_URL)
+# print('API Key: ', AWS_API_URL)
