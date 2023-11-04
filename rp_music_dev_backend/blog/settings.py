@@ -12,10 +12,15 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from dotenv import load_dotenv
-import os
-
 load_dotenv()
+import os
+# import pymysql
+# pymysql.install_as_MySQLdb()
+
+
+
 AWS_API_URL = os.getenv("AWS_API_URL")
+print(AWS_API_URL)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,7 +36,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     AWS_API_URL,
-    'localhost', '127.0.0.1'
+    '127.0.0.1'
     ]
 # START SCRIPT
 # script to resolve AWS EB health check issue as described here
@@ -87,6 +92,7 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'corsheaders',
     'markdownx',
+    'zappa_django_utils',
     # 'ebhealthcheck.apps.EBHealthCheckConfig',
 ]
 
@@ -124,12 +130,20 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
+print('ASDFGHJKLLKJHGFDSA: ', os.getenv("SQL_DB_HOST"))
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # "default": {
+    #     "ENGINE": "django.db.backends.mysql",
+    #     'NAME': os.getenv("SQL_DB_NAME"),
+    #     'USER': os.getenv("SQL_DB_USERNAME"),
+    #     'PASSWORD': os.getenv("SQL_DB_PASSWORD"),
+    #     'HOST': os.getenv("SQL_DB_HOST"),
+    #     'PORT': os.getenv("SQL_DB_PORT"),
+    # }
 }
 
 
@@ -183,3 +197,5 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
 
 ]
+
+print('API Key: ', AWS_API_URL)

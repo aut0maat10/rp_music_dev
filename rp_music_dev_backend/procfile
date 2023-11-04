@@ -1,1 +1,0 @@
-web: gunicorn --bind :8000 --workers 3 --threads 2 rp_music_dev_backend/blog/wsgi:application
