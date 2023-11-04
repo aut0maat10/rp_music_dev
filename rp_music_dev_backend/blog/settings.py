@@ -92,7 +92,6 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'corsheaders',
     'markdownx',
-    'zappa_django_utils',
     # 'ebhealthcheck.apps.EBHealthCheckConfig',
 ]
 
