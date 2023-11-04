@@ -4,3 +4,4 @@ django-cors-headers
 markdown
 django-markdownx
 pillow
+python-dotenv
