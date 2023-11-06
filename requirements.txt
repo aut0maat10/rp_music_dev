@@ -5,3 +5,5 @@ markdown
 django-markdownx
 pillow
 python-dotenv
+pygments
+

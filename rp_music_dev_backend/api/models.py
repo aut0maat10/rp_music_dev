@@ -33,3 +33,6 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'categories'
+
+class MyModel(models.Model):
+    myfield = MarkdownxField()
