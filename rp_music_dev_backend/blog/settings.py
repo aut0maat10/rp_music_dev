@@ -37,7 +37,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     # AWS_API_URL,
     '127.0.0.1',
-    '3.210.51.166'
+    '3.210.51.166',
     'ec2-3-210-51-166.compute-1.amazonaws.com'
     ]
 # START SCRIPT
