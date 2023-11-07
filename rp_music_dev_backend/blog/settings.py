@@ -135,7 +135,7 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/home/ubuntu/rp_music_dev/database_location/db.sqlite3',
+        'NAME': '/home/ubuntu/rp_music_dev/db_location/db.sqlite3',
     }
     # "default": {
     #     "ENGINE": "django.db.backends.mysql",
