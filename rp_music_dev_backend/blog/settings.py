@@ -131,11 +131,11 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-print('ASDFGHJKLLKJHGFDSA: ', os.getenv("SQL_DB_HOST"))
+# print('ASDFGHJKLLKJHGFDSA: ', os.getenv("SQL_DB_HOST"))
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': '/home/ubuntu/rp_music_dev/database/db.sqlite3',
     }
     # "default": {
     #     "ENGINE": "django.db.backends.mysql",
@@ -200,3 +200,4 @@ CORS_ALLOWED_ORIGINS = [
 ]
 MARKDOWNX_MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
 # print('API Key: ', AWS_API_URL)
+print('base dir: ', BASE_DIR)
